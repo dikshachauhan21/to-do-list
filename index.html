@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Priorities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="congrats-overlay" class="hidden">
+            <div class="congrats-content">
+                <h2>Congratulations!</h2>
+                <p>You've completed all your tasks!</p>
+                <button id="close-congrats-btn">Awesome!</button>
+            </div>
+        </div>
+        
+        <header>
+            <h1 id="myH1">To-Do List</h1>
+            <span id="task-count">0 tasks</span>
+        </header>
+        <section class="input-section">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <select id="priority-select">
+                <option value="daily">Daily Work</option>
+                <option value="important">Important</option>
+                <option value="urgent">Urgent</option>
+            </select>
+            <button id="add-task-btn">Add</button>
+        </section>
+        <section class="filter-section">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+        </section>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
